@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-import mitmproxy
+from mitmproxy import http
 import tool.Downloader as downloader
 from resource.douyin_config import Douyin
 
@@ -18,7 +18,7 @@ class Hunter:
 
     douyin_hunter = Douyin()
 
-    def response(self, flow: mitmproxy.http.HTTPFlow):
+    def response(self, flow: http.HTTPFlow):
         response = flow.response
         if 'json' in str(response.headers.get('Content-Type')):
             data = json.loads(str(response.get_content(), 'utf-8'))
