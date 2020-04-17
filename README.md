@@ -16,7 +16,7 @@
 
 ​		如果我们想要自动爬取视频并保存视频文件到电脑当中则需要获取到每次拉取的视频地址并请求文件保存在本地，为了实现这个目的我们用电脑代理手机的网络请求，这样就能获取响应内容进而解析出视频地址。
 
-​		此时我们就需要一个代理软件，大家常用的比如`Charles,Fiddler`等，但是这些软件无法通过简单的方式和我们的Python程序进行联动，所以此处我们选择[Mitmproxy]: https://mitmproxy.org/ 这个代理，具体介绍大家请参照官网。
+​		此时我们就需要一个代理软件，大家常用的比如`Charles,Fiddler`等，但是这些软件无法通过简单的方式和我们的Python程序进行联动，所以此处我们选择[Mitmproxy](https://mitmproxy.org/)这个代理，具体介绍大家请参照官网。
 
 ![temp](./temp.png)
 
@@ -36,13 +36,13 @@
 2. 电脑端ADB命令正常使用
 3. 安装项目需要的依赖：`pip install -r requirements.txt`
 4. 确保电脑`8080`端口可用，此端口为`Mitmproxy`默认代理端口，如有需要可通过命令修改，详情参照官方文档
-5. 连接WIFI并保证与电脑在同一局域网，手机端 [设置代理]:https://gfw.press/blog/?p=68
+5. 连接WIFI并保证与电脑在同一局域网，手机端 [设置代理](https://gfw.press/blog/?p=68)
 
 ### 开始抓取
 
 #### 1. 使用我们定义的抓取脚本启动Mitmproxy代理
 
-Mitmproxy提供3中启动方式，详情参照[官方文档]:https://docs.mitmproxy.org/stable/,此处我们选择[**mitmweb**]:https://docs.mitmproxy.org/stable/tools-mitmweb/方式，方便观察报文内容
+Mitmproxy提供3中启动方式，详情参照[官方文档](https://docs.mitmproxy.org/stable/),此处我们选择[**mitmweb**](https://docs.mitmproxy.org/stable/tools-mitmweb/)方式，方便观察报文内容
 
 项目根目录运行：	
 
@@ -54,7 +54,7 @@ mitmweb -s Launcher.py
 
 #### 2. 手机安装代理证书，打开软件
 
-手机安装Mitmproxy证书。在手机端访问：http://mitm.it  选择安卓下载证书，将证书安装完成即可,[参考]:https://jingyan.baidu.com/article/3c343ff7bb2a5a0d377963b3.html
+手机安装Mitmproxy证书。在手机端访问：http://mitm.it  选择安卓下载证书，将证书安装完成即可,[参考](https://jingyan.baidu.com/article/3c343ff7bb2a5a0d377963b3.html)
 
 安装完成后在**Mitmweb**中即可看到收发的网络请求
 
