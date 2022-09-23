@@ -18,7 +18,7 @@ ldap3==2.7
 MarkupSafe==1.1.1
 mitmproxy==5.1.1
 passlib==1.7.2
-protobuf==3.11.3
+protobuf==3.18.3
 publicsuffix2==2.20191221
 pyasn1==0.4.8
 pycparser==2.20
